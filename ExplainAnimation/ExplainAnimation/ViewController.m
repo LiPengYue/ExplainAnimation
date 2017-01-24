@@ -24,16 +24,6 @@
   
     [propertyAnimation animation];
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    animation.fromValue = [NSValue valueWithCATransform3D:self.view.layer.transform];
-    
-    animation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeScale(1, 1, 1)];
-    animation.duration = 2;
-    animation.delegate = self;
-    animation.removedOnCompletion = NO;//不能再完成后
-    [self.view.layer addAnimation:animation forKey:@"animation"];
-
-    
     
     //----------------新年快乐
     CKShimmerLabel *shimmerLabel = [[CKShimmerLabel alloc]init];
